@@ -1,0 +1,10 @@
+/* consider arr =- [1,2,3,4,5]  and print out the following output
+           arr = [6,5,4,3,2,1,0);
+*/
+
+// code 
+const arr = [1,2,3,4,5];
+x =arr.push(6);
+x = arr.reverse();
+x = arr.push(0);
+console.log(arr);
