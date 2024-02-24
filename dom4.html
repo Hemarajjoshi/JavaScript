@@ -1,0 +1,49 @@
+<!-- allow users add or remove items from the unordered list -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding and removing the items</title>
+</head>
+<body>
+    <ul>
+        <li>apple</li>
+    </ul>
+    <input type="text", placeholder="Enter the item to add or remove">
+    <button id = "add">add</button>
+    <button id = "remove">remove</button>
+</body>
+<script> 
+var add = document.querySelector("#add");
+var remove = document.querySelector("#remove")
+var inp = document.querySelector("input")
+var ul = document.querySelector("ul");
+var li = document.createElement("li")
+var li;
+
+add.addEventListener("click", function(){
+    if (inp.value.trim() ===''){
+        return;
+    }
+    else 
+    {
+        li = document.createElement("li")
+        li.textContent = inp.value.trim();
+        ul.appendChild(li);
+
+    }
+})
+remove.addEventListener("click", function(e) {
+    if (inp.value.trim()===''){
+        return;
+    }
+    else
+    {
+        ul.removeChild(li)
+    }
+})
+
+</script>
+</html>
